@@ -1,8 +1,9 @@
-var path = require('path');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-var config = {
+
+const config = {
   entry: {
     main: path.join(__dirname, '../main.js')
   },
@@ -24,7 +25,7 @@ var config = {
         fallback: 'style-loader'
       })
     }, {
-      test: /\.js$/,
+      test: /\.(js|jsx)$/,
       loader: 'babel-loader',
       exclude: /node_modules/
     }]
