@@ -1,5 +1,3 @@
-// reset css
-import './src/common/style/reset.css';
 // React
 import React from 'react';
 import ReactDom from 'react-dom';

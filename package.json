@@ -4,6 +4,7 @@
   "description": "",
   "main": "main.js",
   "dependencies": {
+    "axios": "^0.19.2",
     "http-server": "^0.12.1",
     "react": "^16.13.0",
     "react-dom": "^16.13.0"
@@ -28,8 +29,8 @@
     "webpack-merge": "^4.2.2"
   },
   "scripts": {
-    "dev": "webpack-dev-server --open --inline --hot --config build/webpack.base.js",
-    "build": "webpack --progress --hide-modules --config build/webpack.prod.js"
+    "dev": "webpack-dev-server --open --inline --hot --config build/webpack.dev.config.js",
+    "build": "webpack --progress --hide-modules --config build/webpack.prod.config.js"
   },
   "repository": {
     "type": "git",

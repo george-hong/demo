@@ -1,0 +1,16 @@
+.loop(@counter) when (@counter<=100) {
+  .loop(@counter+1);
+  .before_width_@{counter} {
+    &::before {
+      width: percentage(@counter/100);
+    }
+  }
+}
+.loop(0);
+
+@media screen and (max-width: 500px) {
+  .hundred_width_under_small_dev {
+    width: 100%;
+    margin: 0 0 10px 0;
+  }
+}
