@@ -12,27 +12,6 @@ const config = {
     path: path.resolve(__dirname, '../dist'),
     filename: 'main.js'
   },
-  module: {
-    rules: [{
-      test: /\.css$/,
-      use: ExtractTextPlugin.extract({
-        use: 'css-loader',
-        fallback: 'style-loader'
-      })
-      // use: ['style-loader', 'css-loader']
-    },{
-      test: /\.less$/,
-      // use: ExtractTextPlugin.extract({  //将less抽取到公共css文件中
-      //   use: 'css-loader!less-loader',
-      //   fallback: 'style-loader'
-      // })
-      use: ['style-loader', 'css-loader', 'less-loader']
-    }, {
-      test: /\.(js|jsx)$/,
-      loader: 'babel-loader',
-      exclude: /node_modules/
-    }]
-  },
   resolve: {
     alias: {
       '@components': resolvePath('src/components'),

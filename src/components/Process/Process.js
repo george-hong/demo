@@ -37,10 +37,10 @@ class Process extends Component {
 
     render() {
         const { value, isActive } = this.props;
-        const { isReachWarningPercent, backgroundPercent } = this.state;
+        const { isReachWarningValue, backgroundPercent } = this.state;
 
         return (
-            <div className={`c_process before_width_${backgroundPercent} ${isReachWarningPercent ? 'warning' : ''} ${isActive ? 'active' : ''}`}>
+            <div className={`c_process before_width_${backgroundPercent} ${isReachWarningValue ? 'warning' : ''} ${isActive ? 'active' : ''}`}>
                 <span>{value}%</span>
             </div>
         )
