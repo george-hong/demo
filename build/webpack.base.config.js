@@ -1,12 +1,14 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+require('babel-polyfill');
+
 
 const resolvePath = dir => path.join(__dirname, '..', dir);
 
 const config = {
   entry: {
-    main: path.join(__dirname, '../main.js')
+    main: ['babel-polyfill', path.join(__dirname, '../main.js')]
   },
   output: {
     path: path.resolve(__dirname, '../dist'),
